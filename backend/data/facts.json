@@ -1,0 +1,21 @@
+{
+    "full_name": "Adamo Idowu Ibrahim",
+    "name": "Idowu",
+    "current_role": "AI Engineer",
+    "location": "Lagos, Nigeria",
+    "email": "idowuadamo2904@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/adamoidowu/",
+    "specialties": [
+        "AI Engineering",
+        "Data Science",
+        "Machine Learning"
+    ],
+    "years_experience": 4,
+    "education": [
+        {
+            "degree": "BSc(Ed) Biology Education",
+            "institution": "University of Lagos",
+            "year": "2021 to 2026"
+        }
+    ]
+}
