@@ -57,3 +57,25 @@ variable "root_domain" {
   type        = string
   default     = ""
 }
+variable "ai_provider" {
+  description = "AI provider to use: 'auto' (try Bedrock, fall back to OpenAI), 'bedrock', or 'openai'"
+  type        = string
+  default     = "auto"
+  validation {
+    condition     = contains(["auto", "bedrock", "openai"], var.ai_provider)
+    error_message = "ai_provider must be one of: auto, bedrock, openai."
+  }
+}
+
+variable "openai_api_key" {
+  description = "OpenAI API key used as fallback when Bedrock is unavailable"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
+variable "openai_model" {
+  description = "OpenAI model to use when falling back from Bedrock"
+  type        = string
+  default     = "gpt-4o-mini"
+}

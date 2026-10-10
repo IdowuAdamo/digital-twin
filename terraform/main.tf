@@ -138,6 +138,10 @@ resource "aws_lambda_function" "api" {
       USE_S3              = "true"
       BEDROCK_MODEL_ID    = var.bedrock_model_id
       DEFAULT_AWS_REGION  = var.bedrock_region
+      # OpenAI fallback -- used automatically when Bedrock is unavailable (AI_PROVIDER=auto)
+      AI_PROVIDER         = var.ai_provider
+      OPENAI_API_KEY      = var.openai_api_key
+      OPENAI_MODEL        = var.openai_model
     }
   }
 
